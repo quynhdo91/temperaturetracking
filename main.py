@@ -12,6 +12,7 @@ px.set_mapbox_access_token(mapbox_access_token)
 
 df = pd.read_excel("sensor_data.xlsx")
 df1 = pd.read_excel("vessel_data.xlsx")
+
 vessel_name = df['vessel'].unique()
 
 # Keep this out of source code repository - save in a file or a database
