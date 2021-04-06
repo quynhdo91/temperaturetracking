@@ -68,7 +68,11 @@ def update_rows(selected_value):
     fig2 = px.scatter_mapbox(df1_fil,
                              lon='longitude',
                              lat='latitude',
-                             hover_data=['Max sensor temp', 'Mean sensor temp', 'Min sensor temp'],
+                             hover_data={'longitude': False, 'latitude': False,
+                                         'Max sensor temp': ':.2f',
+                                         'Mean sensor temp': ':.2f',
+                                         'Min sensor temp': ':.2f'},
+                             hover_name='vessel_time',
                              size='Wind temp',
                              color='Wind temp',
                              color_continuous_scale=px.colors.cyclical.IceFire
